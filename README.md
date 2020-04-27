@@ -15,5 +15,28 @@ https://whimsical.com/VoKA1AJcgPosHpFQUtAV5E
 <br>
 
 
+### MVP
+
+- Survey Questionnaire based on dining categories, geographic region, price, and location
+- Yelp API
+- Take questionnaire answers and place into url string for api query search 
+- Mobile-first, conversational design
+- Responsive design
+- Generate and display dining results
+- Get user location
+
+
+<br>
+
+### Post-MVP
+
+- Add categories to questionairre -> Pickiness, Health, Gluten free vegan, vegetarian, etc.
+- Choose for me button vs Multiple results
+- Skip question option
+- Select multiple options
+- Gif icons as part of questions
+
+
+<br>
 
 By Luke Sweeney
