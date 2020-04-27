@@ -99,22 +99,21 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| App  |    H    |     3 hrs      |          |      |
-| API |    H     |     4 hrs      |          |          |
+| App Component  |    H    |     1 hr      |          |      |
+| API |    H     |     2 hrs      |          |          |
 |  Basic JSX |    L     |     1 hr     |          |         |
 |  Header |    H     |     1 hr     |          |         |
-| Survey Component |    H     |     2 hrs      |          |          |
-| Design survey/categories |    H     |     6 hrs      |          |          |
-| Function to match survey results to API query |    H     |     5 hrs      |          |          |
-| Create state for survey questions and choices |    H     |     5 hrs      |          |          |
-| Create dynamic choices depending on the previous question |    H     |     5 hrs      |          |          |
-| Choice |    H     |     10 hrs      |          |          |
+| Design survey/categories |    H     |     3 hrs      |          |          |
+| Function to match survey results to API query |    H     |     4 hrs      |          |          |
+| Create state for survey questions and choices |    H     |     4 hrs      |          |          |
+| Create dynamic choices depending on the previous question |    H     |     3 hrs      |          |          |
+| Choice Component |    H     |     1 hr      |          |          |
 | Get icons for each choice |    H     |     2 hrs      |          |          |
-| Change state for survey questions |    H     |     5 hrs      |          |          |
-| Results |    H     |     5 hrs      |          |          |
+| Change state for survey questions |    H     |     3 hrs      |          |          |
+| Results Component |    H     |     2 hrs      |          |          |
 | Get user location |    M     |     2 hrs      |          |          |
-| Basic CSS |    M     |     8 hrs      |          |         |
-| Flexbox |    H     |     5 hrs      |          |         |
+| Basic CSS |    M     |     3 hrs      |          |         |
+| Flexbox |    H     |     4 hrs      |          |         |
 | Stroybook |    M     |     3 hrs      |          |          |
 | TOTAL               |          |           |         |          |
 
