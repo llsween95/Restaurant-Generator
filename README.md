@@ -39,4 +39,26 @@ https://whimsical.com/VoKA1AJcgPosHpFQUtAV5E
 
 <br>
 
+#### Libraries
+
+
+
+|     Library      | Description                                |
+| :--------------: | :----------------------------------------- |
+|   React Router   | Route my React components |
+
+
+<br>
+
+#### Data
+
+
+
+|    API     | Quality Docs? | Website       | Sample Query                            |
+| :--------: | :-----------: | :------------ | :-------------------------------------- |
+| Yelp API |      yes      | https://www.yelp.com/developers/documentation/v3/get_started | https://api.yelp.com/v3/businesses/search?=&term=restaurants&location=10710|
+
+<br>
+
+
 By Luke Sweeney
