@@ -20,10 +20,11 @@ https://whimsical.com/VoKA1AJcgPosHpFQUtAV5E
 - Survey Questionnaire based on dining categories, geographic region, price, and location
 - Yelp API
 - Take questionnaire answers and place into url string for api query search 
-- Mobile-first, conversational design
+- Mobile-first, conversational design using Flexbox
 - Responsive design
 - Generate and display dining results
 - Get user location
+- Storybook
 
 
 <br>
@@ -100,13 +101,21 @@ src
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
 | App  |    H    |     3 hrs      |          |      |
 | API |    H     |     4 hrs      |          |          |
-|  Basic JSX |    H     |     1 hr     |          |         |
+|  Basic JSX |    L     |     1 hr     |          |         |
 |  Header |    H     |     1 hr     |          |         |
-| Survey |    H     |     10 hrs      |          |          |
+| Survey Component |    H     |     2 hrs      |          |          |
+| Design survey/categories |    H     |     6 hrs      |          |          |
+| Function to match survey results to API query |    H     |     5 hrs      |          |          |
+| Create state for survey questions and choices |    H     |     5 hrs      |          |          |
+| Create dynamic choices depending on the previous question |    H     |     5 hrs      |          |          |
 | Choice |    H     |     10 hrs      |          |          |
+| Get icons for each choice |    H     |     2 hrs      |          |          |
+| Change state for survey questions |    H     |     5 hrs      |          |          |
 | Results |    H     |     5 hrs      |          |          |
-| Basic CSS |    H     |     8 hrs      |          |         |
-| Flexbox |    L     |     5 hrs      |          |         |
+| Get user location |    M     |     2 hrs      |          |          |
+| Basic CSS |    M     |     8 hrs      |          |         |
+| Flexbox |    H     |     5 hrs      |          |         |
+| Stroybook |    M     |     3 hrs      |          |          |
 | TOTAL               |          |           |         |          |
 
 <br>
