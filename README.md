@@ -60,5 +60,55 @@ https://whimsical.com/VoKA1AJcgPosHpFQUtAV5E
 
 <br>
 
+#### Component Hierarchy
+
+
+
+```
+src
+|__ components/
+      |__ App.js
+      |__ Header.js
+      |__ Survey.js
+      |__ Choice.js
+      |__ Results.js
+      |__ Footer.js
+```
+
+<br>
+
+#### Component Breakdown
+
+> Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
+
+|  Component   |    Type    | state | props | Description                                                      |
+| :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
+|    APP.js    | functional |   n   |   n   | _will be the parent component and hold all information._               |
+|  Header | functional |   n   |   n   | the header will contain the app name.      |
+|   Survey   |      |   y  |   y   | A questionairre about which restaurant to eat at.    |               |
+|   Choice   |  |   y   |   y   | There will be 3-4 choices within each questionairre that will change depending on what the question is. |
+|    Results    |  |   y   |   y   | Results will display restaurant info such as name, image, price range, review average, and location. |
+|    Footer  |  |   n   |   n   | Luke Sweeney 2020 - Yelp API |
+
+<br>
+
+
+#### Component Estimates
+
+
+| Task                | Priority | Estimated Time | Time Invested | Actual Time |
+| ------------------- | :------: | :------------: | :-----------: | :---------: |
+| App  |    H    |     3 hrs      |          |      |
+| API |    H     |     4 hrs      |          |          |
+|  Basic JSX |    H     |     1 hr     |          |         |
+|  Header |    H     |     1 hr     |          |         |
+| Survey |    H     |     10 hrs      |          |          |
+| Choice |    H     |     10 hrs      |          |          |
+| Results |    H     |     5 hrs      |          |          |
+| Basic CSS |    H     |     8 hrs      |          |         |
+| Flexbox |    L     |     5 hrs      |          |         |
+| TOTAL               |          |           |         |          |
+
+<br>
 
 By Luke Sweeney
