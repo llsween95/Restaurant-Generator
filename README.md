@@ -83,12 +83,12 @@ src
 
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    APP.js    | functional |   n   |   n   | _will be the parent component and hold all information._               |
+|    APP.js    | class |   n   |   n   | _will be the parent component and hold all information._               |
 |  Header | functional |   n   |   n   | the header will contain the app name.      |
-|   Survey   |      |   y  |   y   | A questionairre about which restaurant to eat at.    |               |
-|   Choice   |  |   y   |   y   | There will be 3-4 choices within each questionairre that will change depending on what the question is. |
-|    Results    |  |   y   |   y   | Results will display restaurant info such as name, image, price range, review average, and location. |
-|    Footer  |  |   n   |   n   | Luke Sweeney 2020 - Yelp API |
+|   Survey   |   class   |   y  |   y   | A questionairre about which restaurant to eat at.    |               |
+|   Choice   | class |   y   |   y   | There will be 3-4 choices within each questionairre that will change depending on what the question is. |
+|    Results    | class |   y   |   y   | Results will display restaurant info such as name, image, price range, review average, and location. |
+|    Footer  | functional |   n   |   n   | Luke Sweeney 2020 - Yelp API |
 
 <br>
 
