@@ -4,6 +4,7 @@ import Survey from './Survey'
 import Question1 from './Question1'
 import Question2 from './Question2'
 import Question3 from './Question3'
+import Choice from './Choice'
 import Results from './Results'
 import Footer from './Footer'
 import { Route, Link, Switch } from 'react-router-dom'
@@ -15,11 +16,13 @@ class App extends Component {
     super()
     this.state = {
       businesses: [],
-      options: [
-        { categories: [{ name: 'American' }, { name: 'Asian' }, { name: 'Latin' }, { name: 'Italian' }, { name: 'Mediterranean' }, { name: 'Health' }] },
-        { prices: ['$', '$$', '$$$', '$$$$'] },
-        { location: '' }
-      ],
+      options: {
+        categories: ['American', 'Asian', 'Latin', 'Italian', 'Mediterranean', 'Health'],
+        prices: ['$', '$$', '$$$', '$$$$'],
+        location: ''
+      },
+
+
       question: 'Find-N-Dine'
     }
   }
@@ -46,16 +49,16 @@ class App extends Component {
 
 
     // Businesses
-    let biz = this.state.businesses
+    // let biz = this.state.businesses
 
-    let bizCity = biz[0].location.city
-    let bizAddress = biz[0].location.display_address[0] + ' ' + biz[0].location.display_address[1]
-    let bizCoords = biz[0].coordinates
-    let bizPhone = biz[0].display_phone
-    let priceAndRating = biz[0].price + ' ' + biz[0].rating
-    let imgUrl = biz[0].image_url
-    console.log(imgUrl)
-    //console.log()
+    // let bizCity = biz[0].location.city
+    // let bizAddress = biz[0].location.display_address[0] + ' ' + biz[0].location.display_address[1]
+    // let bizCoords = biz[0].coordinates
+    // let bizPhone = biz[0].display_phone
+    // let priceAndRating = biz[0].price + ' ' + biz[0].rating
+    // let imgUrl = biz[0].image_url
+    // console.log(imgUrl)
+    // //console.log()
 
   }
 
@@ -72,9 +75,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/">
               <Question1 choices={this.state.options.categories.map((category, index) => (
-                <div key="name">
-                  {category}
-                </div>
+                <div key="name" option={category}></div>
               ))}
               />
             </Route>

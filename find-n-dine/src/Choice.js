@@ -4,7 +4,7 @@ class Choice extends Component {
   render() {
     return (
       <>
-        <button className="choiceBtn">Choice</button>
+        <button className="choiceBtn">{this.props.options}</button>
       </>
     )
   }

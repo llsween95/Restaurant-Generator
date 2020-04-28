@@ -8,9 +8,9 @@ class Question1 extends Component {
       <div>
         Question 1
         <Link to='/2'>
-          <Choice />
+          <button className="choiceBtn">{this.props.option}</button>
         </Link>
-        <p>{this.props.choices}</p>
+
       </div>
     )
   }
