@@ -7,7 +7,7 @@ class Survey extends Component {
   render() {
     return (
       <div className="survey">
-        <h3>Question text?</h3>
+        <h3>{this.props.question}</h3>
         <div className="choiceContainer">
           <Choice />
           <Choice />

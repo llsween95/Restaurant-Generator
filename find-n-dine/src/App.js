@@ -13,14 +13,17 @@ class App extends Component {
     this.state = {
       businesses: [],
       options: [
-        { categories: [] },
+        { categories: ['American', 'Asian', 'Latin'] },
         { food: [] },
         { countries: [] },
         { prices: [] },
         { location: '' }
-      ]
+      ],
+      question: 'Find-N-Dine'
     }
   }
+
+
 
 
 
@@ -36,15 +39,21 @@ class App extends Component {
 
     this.setState({
       businesses: response.data.businesses
+
     })
+
+
 
     // Businesses
     let biz = this.state.businesses
+
     let bizCity = biz[0].location.city
     let bizAddress = biz[0].location.display_address[0] + ' ' + biz[0].location.display_address[1]
     let bizCoords = biz[0].coordinates
     let bizPhone = biz[0].display_phone
-    console.log(bizPhone)
+    let priceAndRating = biz[0].price + ' ' + biz[0].rating
+    let imgUrl = biz[0].image_url
+    console.log(imgUrl)
     //console.log()
 
   }
@@ -61,7 +70,7 @@ class App extends Component {
 
           <Switch>
             <Route exact path="/">
-              <Survey />
+              <Survey question={this.state.question} />
             </Route>
 
             <Route path="/results">
