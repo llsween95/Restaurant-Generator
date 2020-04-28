@@ -11,7 +11,14 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      businesses: []
+      businesses: [],
+      options: [
+        { categories: [] },
+        { food: [] },
+        { countries: [] },
+        { prices: [] },
+        { location: '' }
+      ]
     }
   }
 
@@ -20,24 +27,37 @@ class App extends Component {
 
   async componentDidMount() {
 
-    const apiCall = await axios({
-      baseURL: 'https://api.yelp.com/v3/businesses/',
+    const response = await axios({
+      baseURL: 'https://corsanywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=restaurants&location=10710',
       headers: {
-        Authorization: 'Bearer VH55OzljuVjIfTgkNbrFZSKpqrDzuldnxMc6DooDLTrVhl_swACA-XW_qqzlkblwB2LgJ_hKKpthcNfoH5_UiJ1wMvHEZJNI0CFrk75YBKOaHrWi7DcOr_KcmLikXnYx',
+        Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`
       }
     })
-    console.log('hi')
+
+    this.setState({
+      businesses: response.data.businesses
+    })
+
+    // Businesses
+    let biz = this.state.businesses
+    let bizCity = biz[0].location.city
+    let bizAddress = biz[0].location.display_address[0] + ' ' + biz[0].location.display_address[1]
+    let bizCoords = biz[0].coordinates
+    let bizPhone = biz[0].display_phone
+    console.log(bizPhone)
+    //console.log()
 
   }
 
 
   render() {
-    //console.log(process.env.REACT_APP_FAVLIQUOR)
+
     return (
       <div className="App">
         <Header />
 
         <main>
+
 
           <Switch>
             <Route exact path="/">
@@ -45,7 +65,13 @@ class App extends Component {
             </Route>
 
             <Route path="/results">
-              <Results />
+              <Results
+                results={this.state.businesses.map((business, index) => (
+                  <>
+                    {business.location.display_address}
+                  </>
+                ))}
+              />
             </Route>
 
           </Switch>

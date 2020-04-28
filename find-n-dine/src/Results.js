@@ -10,7 +10,7 @@ class Results extends Component {
           <p>$$</p>
           <p>***</p>
         </div>
-        <p>668 Tuckahoe Rd. Yonkers, NY 10710</p>
+        <p>{this.props.results[2]}</p>
       </div>
     )
   }
