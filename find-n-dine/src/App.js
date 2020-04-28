@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Header from './Header'
 import Survey from './Survey'
+import Question1 from './Question1'
+import Question2 from './Question2'
+import Question3 from './Question3'
 import Results from './Results'
 import Footer from './Footer'
 import { Route, Link, Switch } from 'react-router-dom'
@@ -13,10 +16,8 @@ class App extends Component {
     this.state = {
       businesses: [],
       options: [
-        { categories: ['American', 'Asian', 'Latin'] },
-        { food: [] },
-        { countries: [] },
-        { prices: [] },
+        { categories: [{ name: 'American' }, { name: 'Asian' }, { name: 'Latin' }, { name: 'Italian' }, { name: 'Mediterranean' }, { name: 'Health' }] },
+        { prices: ['$', '$$', '$$$', '$$$$'] },
         { location: '' }
       ],
       question: 'Find-N-Dine'
@@ -70,7 +71,21 @@ class App extends Component {
 
           <Switch>
             <Route exact path="/">
-              <Survey question={this.state.question} />
+              <Question1 choices={this.state.options.categories.map((category, index) => (
+                <div key="name">
+                  {category}
+                </div>
+              ))}
+              />
+            </Route>
+
+            <Route path="/2">
+              <Question2 />
+            </Route>
+
+
+            <Route path="/3">
+              <Question3 />
             </Route>
 
             <Route path="/results">
