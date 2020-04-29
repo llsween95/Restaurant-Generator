@@ -38,31 +38,12 @@ class App extends Component {
     })
   }
 
-  priceConverter = (price) => {
-    if (price === '$') {
-      price = 1
-      return price
-    } else if (price === '$$') {
-      price = 2
-      return price
-    } else if (price === '$$$') {
-      price = 3
-      return price
-    } else if (price === '$$$$') {
-      price = 4
-      return price
-    }
-    return price
-  }
 
   handleClick2 = (price) => {
 
-
-    let convertedPrice = priceConverter(price)
-
     this.setState({
 
-      prices: [convertedPrice]
+      prices: [price.length]
 
     })
   }
@@ -143,7 +124,7 @@ class App extends Component {
               <Results
                 results={this.state.businesses.map((business, index) => (
                   <>
-                    {business.location.display_address}
+                    {business.name}
                   </>
                 ))}
               />
