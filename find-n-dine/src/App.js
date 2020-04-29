@@ -18,6 +18,8 @@ class App extends Component {
       businesses: [],
       categories: ['American', 'Asian', 'Latin', 'Italian', 'Mediterranean', 'Healthyyyy'],
       prices: ['$', '$$', '$$$', '$$$$'],
+      latitude: 0,
+      longitude: 0,
       question: 'Find-N-Dine'
     }
 
@@ -29,13 +31,17 @@ class App extends Component {
 
 
   async componentDidMount() {
+    let lat = this.state.latitude
+    let lon = this.state.longitude
 
     const response = await axios({
-      baseURL: 'https://corsanywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=restaurants&location=10710',
+      baseURL: `https://corsanywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=restaurants&latitude=${lat}&longitude=${lon}`,
       headers: {
         Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`
       }
     })
+
+    console.log(response)
 
     this.setState({
       businesses: response.data.businesses
@@ -73,6 +79,30 @@ class App extends Component {
     })
   }
 
+  getUserLocation = () => {
+    if ('geolocation' in navigator) {
+      console.log('available.')
+      navigator.geolocation.getCurrentPosition((position) => {
+        console.log("Latitude is :", position.coords.latitude);
+        console.log("Longitude is :", position.coords.longitude);
+        console.log('Position is:', position)
+        this.setState({
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude
+        })
+
+      })
+    } else {
+      console.log('not available.')
+    }
+
+
+
+  }
+
+
+
+
 
 
 
@@ -97,7 +127,7 @@ class App extends Component {
 
 
             <Route path="/3">
-              <Question3 />
+              <Question3 onClick={this.getUserLocation} />
             </Route>
 
             <Route path="/results">

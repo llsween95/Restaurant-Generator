@@ -8,7 +8,7 @@ class Question3 extends Component {
       <div>
         Question 3
         <Link to='/results'>
-          <button className="choiceBtn">Get user location</button>
+          <button onClick={() => this.props.onClick()} className="choiceBtn">Get user location</button>
         </Link>
       </div>
     )
