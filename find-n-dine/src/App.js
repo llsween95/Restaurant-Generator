@@ -16,14 +16,11 @@ class App extends Component {
     super()
     this.state = {
       businesses: [],
-      options: {
-        categories: ['American', 'Asian', 'Latin', 'Italian', 'Mediterranean', 'Healthyyyy'],
-        prices: ['$', '$$', '$$$', '$$$$'],
-        location: ''
-      },
-
+      categories: ['American', 'Asian', 'Latin', 'Italian', 'Mediterranean', 'Healthyyyy'],
+      prices: ['$', '$$', '$$$', '$$$$'],
       question: 'Find-N-Dine'
     }
+
   }
 
 
@@ -47,37 +44,55 @@ class App extends Component {
 
   }
 
-  handleClick1(category) {
+  handleClick1 = (category) => {
     console.log('Category', category)
 
     this.setState({
-      categories: category
+
+      categories: [category]
+
     })
-    console.log(this.state.options)
   }
 
-  handleClick2(price) {
-    console.log('Price:', price)
+
+  handleClick2 = (price) => {
+
+    this.setState({
+
+      prices: [price]
+
+    })
+
+
   }
+
+  toHomePage = () => {
+    this.setState({
+      categories: ['American', 'Asian', 'Latin', 'Italian', 'Mediterranean', 'Healthyyyy'],
+      prices: ['$', '$$', '$$$', '$$$$']
+    })
+  }
+
+
 
 
   render() {
 
     return (
       <div className="App">
-        <Header />
+        <Header onClick={this.toHomePage} />
 
         <main>
 
 
           <Switch>
             <Route exact path="/">
-              <Question1 onClick={this.handleClick1} categories={this.state.options.categories}
+              <Question1 onClick={this.handleClick1} categories={this.state.categories}
               />
             </Route>
 
             <Route path="/2">
-              <Question2 onClick={this.handleClick2} prices={this.state.options.prices} />
+              <Question2 onClick={this.handleClick2} prices={this.state.prices} />
             </Route>
 
 

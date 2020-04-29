@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-export default function Header() {
-  return (
-    <header>
-      <Link to="/">
-        <h1>Find-N-Dine</h1>
-      </Link>
-    </header>
-  )
+class Header extends Component {
+  render() {
+    return (
+      <header>
+        <Link to="/">
+          <h1 onClick={() => this.props.onClick()}>Find-N-Dine</h1>
+        </Link>
+      </header>
+    )
+  }
+
 }
+
+export default Header
