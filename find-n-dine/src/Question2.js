@@ -7,9 +7,12 @@ class Question2 extends Component {
     return (
       <div>
         Question 2
-        <Link to="/3">
-          <Choice />
-        </Link>
+        {this.props.prices.map((cat) => (
+          <Link to='/3'>
+            <button className="choiceBtn">{cat}</button>
+          </Link>
+        ))}
+
       </div>
     )
   }

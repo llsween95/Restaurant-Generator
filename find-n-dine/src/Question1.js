@@ -7,9 +7,12 @@ class Question1 extends Component {
     return (
       <div>
         Question 1
-        <Link to='/2'>
-          <button className="choiceBtn">{this.props.option}</button>
-        </Link>
+        {this.props.categories.map((cat) => (
+          <Link to='/2'>
+            <button className="choiceBtn">{cat}</button>
+          </Link>
+        ))}
+
 
       </div>
     )

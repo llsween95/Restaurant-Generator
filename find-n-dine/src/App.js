@@ -17,11 +17,10 @@ class App extends Component {
     this.state = {
       businesses: [],
       options: {
-        categories: ['American', 'Asian', 'Latin', 'Italian', 'Mediterranean', 'Health'],
+        categories: ['American', 'Asian', 'Latin', 'Italian', 'Mediterranean', 'Healthyyyy'],
         prices: ['$', '$$', '$$$', '$$$$'],
         location: ''
       },
-
 
       question: 'Find-N-Dine'
     }
@@ -46,20 +45,6 @@ class App extends Component {
 
     })
 
-
-
-    // Businesses
-    // let biz = this.state.businesses
-
-    // let bizCity = biz[0].location.city
-    // let bizAddress = biz[0].location.display_address[0] + ' ' + biz[0].location.display_address[1]
-    // let bizCoords = biz[0].coordinates
-    // let bizPhone = biz[0].display_phone
-    // let priceAndRating = biz[0].price + ' ' + biz[0].rating
-    // let imgUrl = biz[0].image_url
-    // console.log(imgUrl)
-    // //console.log()
-
   }
 
 
@@ -74,14 +59,12 @@ class App extends Component {
 
           <Switch>
             <Route exact path="/">
-              <Question1 choices={this.state.options.categories.map((category, index) => (
-                <div key="name" option={category}></div>
-              ))}
+              <Question1 onClick={() => console.log('hi')} categories={this.state.options.categories}
               />
             </Route>
 
             <Route path="/2">
-              <Question2 />
+              <Question2 prices={this.state.options.prices} />
             </Route>
 
 
