@@ -47,6 +47,10 @@ class App extends Component {
 
   }
 
+  handleClick1() {
+    console.log('yoo')
+  }
+
 
   render() {
 
@@ -59,7 +63,7 @@ class App extends Component {
 
           <Switch>
             <Route exact path="/">
-              <Question1 onClick={() => console.log('hi')} categories={this.state.options.categories}
+              <Question1 onClick={this.handleClick1} categories={this.state.options.categories}
               />
             </Route>
 

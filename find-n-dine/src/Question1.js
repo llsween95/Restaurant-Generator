@@ -9,7 +9,7 @@ class Question1 extends Component {
         Question 1
         {this.props.categories.map((cat) => (
           <Link to='/2'>
-            <button className="choiceBtn">{cat}</button>
+            <button onClick={this.props.onClick} className="choiceBtn">{cat}</button>
           </Link>
         ))}
 
