@@ -10,7 +10,7 @@ class Results extends Component {
           <p>$$</p>
           <p>***</p>
         </div>
-        <p>{this.props.results[8]}</p>
+        <p>{this.props.results[1]}</p>
       </div>
     )
   }

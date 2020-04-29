@@ -28,28 +28,6 @@ class App extends Component {
 
 
 
-
-
-  async componentDidMount() {
-    let lat = this.state.latitude
-    let lon = this.state.longitude
-
-    const response = await axios({
-      baseURL: `https://corsanywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=restaurants&latitude=${lat}&longitude=${lon}`,
-      headers: {
-        Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`
-      }
-    })
-
-    console.log(response)
-
-    this.setState({
-      businesses: response.data.businesses
-
-    })
-
-  }
-
   handleClick1 = (category) => {
     console.log('Category', category)
 
@@ -60,17 +38,36 @@ class App extends Component {
     })
   }
 
+  priceConverter = (price) => {
+    if (price === '$') {
+      price = 1
+      return price
+    } else if (price === '$$') {
+      price = 2
+      return price
+    } else if (price === '$$$') {
+      price = 3
+      return price
+    } else if (price === '$$$$') {
+      price = 4
+      return price
+    }
+    return price
+  }
 
   handleClick2 = (price) => {
 
+
+    let convertedPrice = priceConverter(price)
+
     this.setState({
 
-      prices: [price]
+      prices: [convertedPrice]
 
     })
-
-
   }
+
+
 
   toHomePage = () => {
     this.setState({
@@ -86,20 +83,32 @@ class App extends Component {
         console.log("Latitude is :", position.coords.latitude);
         console.log("Longitude is :", position.coords.longitude);
         console.log('Position is:', position)
-        this.setState({
-          latitude: position.coords.latitude,
-          longitude: position.coords.longitude
+        const response = axios({
+          baseURL: `https://corsanywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${this.state.categories}&price=${this.state.prices}&latitude=${position.coords.latitude}&longitude=${position.coords.longitude}`,
+          headers: {
+            Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`
+          }
+        }).then(response => {
+          this.setState({
+            businesses: response.data.businesses,
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude
+          });
+
         })
+
 
       })
     } else {
       console.log('not available.')
     }
-
-
-
   }
 
+
+  generateRestaurant = () => {
+    console.log('Biznesses', this.state.businesses)
+
+  }
 
 
 
