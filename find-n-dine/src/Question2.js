@@ -7,9 +7,9 @@ class Question2 extends Component {
     return (
       <div>
         Question 2
-        {this.props.prices.map((cat) => (
+        {this.props.prices.map((price) => (
           <Link to='/3'>
-            <button className="choiceBtn">{cat}</button>
+            <button onClick={() => this.props.onClick(price)} className="choiceBtn">{price}</button>
           </Link>
         ))}
 

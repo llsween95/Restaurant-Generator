@@ -47,8 +47,17 @@ class App extends Component {
 
   }
 
-  handleClick1() {
-    console.log('yoo')
+  handleClick1(category) {
+    console.log('Category', category)
+
+    this.setState({
+      categories: category
+    })
+    console.log(this.state.options)
+  }
+
+  handleClick2(price) {
+    console.log('Price:', price)
   }
 
 
@@ -68,7 +77,7 @@ class App extends Component {
             </Route>
 
             <Route path="/2">
-              <Question2 prices={this.state.options.prices} />
+              <Question2 onClick={this.handleClick2} prices={this.state.options.prices} />
             </Route>
 
 
