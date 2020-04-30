@@ -1,9 +1,11 @@
 import React from 'react'
+import FooterText from './FooterText'
 
 export default function Footer() {
   return (
     <footer>
-      <p>Luke Sweeney 2020 | Yelp API</p>
+      <FooterText label="Primary" />
+      <FooterText label="Secondary" />
     </footer>
   )
 }

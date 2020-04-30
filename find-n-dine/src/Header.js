@@ -7,7 +7,7 @@ class Header extends Component {
     return (
       <header>
         <Link to="/">
-          <HeaderText onClick={() => this.props.onClick} />
+          <h1 onClick={() => this.props.onClick()}>Find-N-Dine</h1>
         </Link>
       </header>
     )
