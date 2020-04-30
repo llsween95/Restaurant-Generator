@@ -1,11 +1,10 @@
 import React from 'react';
-import Footer from './Footer';
 
 // This is a functional component - just sent up a little differently as an arrow function!
-const FooterText = (props) => (
-  <p>
+const QuestionText = (props) => (
+  <h3>
     {props.label}
-  </p>
+  </h3>
 )
 
-export default FooterText;
+export default QuestionText;

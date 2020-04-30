@@ -6,3 +6,4 @@ import Button from './Button';
 
 storiesOf('Button', module)
   .add('Primary', () => <Button label="Primary" />)
+  .add('+ Add song', () => <Button label="+ Add song" />)

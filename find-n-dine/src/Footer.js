@@ -1,11 +1,11 @@
 import React from 'react'
-import FooterText from './FooterText'
+import Text from './Text'
 
 export default function Footer() {
   return (
     <footer>
-      <FooterText label="Primary" />
-      <FooterText label="Secondary" />
+      <Text label="Luke Sweeney 2020" />
+      <Text label="Yelp API" />
     </footer>
   )
 }
