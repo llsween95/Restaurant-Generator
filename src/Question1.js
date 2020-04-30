@@ -5,13 +5,16 @@ import { Link, withRouter } from 'react-router-dom'
 class Question1 extends Component {
   render() {
     return (
-      <div>
-        Question 1
-        {this.props.categories.map((cat) => (
-          <Link to='/2'>
-            <button onClick={() => this.props.onClick(cat)} className="choiceBtn">{cat}</button>
-          </Link>
-        ))}
+      <div className="questionContainer">
+        <h3>Choose your food category:</h3>
+
+        <div className="choicesContainer">
+          {this.props.categories.map((cat) => (
+            <Link to='/2'>
+              <button onClick={() => this.props.onClick(cat)} className="choiceBtn">{cat}</button>
+            </Link>
+          ))}
+        </div>
 
 
       </div>

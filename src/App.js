@@ -90,15 +90,6 @@ class App extends Component {
   }
 
 
-  generateRestaurant = () => {
-    console.log('Biznesses', this.state.businesses)
-    const random = Math.floor(Math.random() * this.state.businesses.length)
-    const choice = this.state.businesses[random]
-    this.setState({
-      choice: choice
-    })
-
-  }
 
 
 

@@ -9,4 +9,4 @@ const style = {
 }
 
 storiesOf('Footer', module)
-  .add('Footer', () => <footer style={style} label="Footer"></footer>)
+  .add('Footer', () => <Footer style={style} label="Footer" />)

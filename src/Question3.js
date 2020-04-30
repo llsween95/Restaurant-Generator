@@ -6,7 +6,8 @@ class Question3 extends Component {
   render() {
     return (
       <div>
-        Question 3
+        <h3>Question 3</h3>
+
         <Link to='/results'>
           <button onClick={() => this.props.onClick()} className="choiceBtn">Get user location</button>
         </Link>

@@ -8,13 +8,15 @@ class Question2 extends Component {
 
 
     return (
-      <div>
-        Question 2
-        {this.props && this.props.prices.map((price) => (
-          <Link to='/3'>
-            <button onClick={() => this.props.onClick(price)} className="choiceBtn">{price}</button>
-          </Link>
-        ))}
+      <div className="questionContainer2">
+        <h3>Select a price range:</h3>
+        <div className="choiceContainer2">
+          {this.props && this.props.prices.map((price) => (
+            <Link to='/3'>
+              <button onClick={() => this.props.onClick(price)} className="choiceBtn2">{price}</button>
+            </Link>
+          ))}
+        </div>
 
       </div>
     )
