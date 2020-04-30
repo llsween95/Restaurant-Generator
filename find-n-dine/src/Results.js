@@ -3,15 +3,16 @@ import React, { Component } from 'react'
 
 class Results extends Component {
   render() {
+    console.log(this.props.results.location)
     return (
       <div className="resultsContainer">
-        <h3>Restaurant Name</h3>
-        <img src="https://s3-media0.fl.yelpcdn.com/bphoto/CuPzELhjoygfXg85KF1Ljw/l.jpg"></img>
+        <h3>{this.props.results.name}</h3>
+        <img src={this.props.results.image_url}></img>
         <div className="restaurant-details">
-          <p>$$</p>
-          <p>***</p>
+          <p>{this.props.results.price}</p>
+          <p>{this.props.results.rating}</p>
         </div>
-        <p>{this.props.results[1]}</p>
+        <p>{this.props.results.location && this.props.results.location.display_address}</p>
       </div>
     )
   }

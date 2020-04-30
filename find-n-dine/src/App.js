@@ -16,11 +16,12 @@ class App extends Component {
     super()
     this.state = {
       businesses: [],
-      categories: ['American', 'Asian', 'Latin', 'Italian', 'Mediterranean', 'Healthyyyy'],
+      categories: ['American', 'Asian', 'Latin', 'Italian', 'Mediterranean', 'Healthy'],
       prices: ['$', '$$', '$$$', '$$$$'],
       latitude: 0,
       longitude: 0,
-      question: 'Find-N-Dine'
+      question: 'Find-N-Dine',
+      choice: {}
     }
 
   }
@@ -52,7 +53,7 @@ class App extends Component {
 
   toHomePage = () => {
     this.setState({
-      categories: ['American', 'Asian', 'Latin', 'Italian', 'Mediterranean', 'Healthyyyy'],
+      categories: ['American', 'Asian', 'Latin', 'Italian', 'Mediterranean', 'Healthy'],
       prices: ['$', '$$', '$$$', '$$$$']
     })
   }
@@ -65,12 +66,15 @@ class App extends Component {
         console.log("Longitude is :", position.coords.longitude);
         console.log('Position is:', position)
         const response = axios({
-          baseURL: `https://corsanywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${this.state.categories}&price=${this.state.prices}&latitude=${position.coords.latitude}&longitude=${position.coords.longitude}`,
+          baseURL: `https://corsanywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${this.state.categories}&price=${this.state.prices}&latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&radius=40000`,
           headers: {
             Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`
           }
         }).then(response => {
+          const random = Math.floor(Math.random() * this.state.businesses.length)
+          const choice = response.data.businesses[random]
           this.setState({
+            choice: choice,
             businesses: response.data.businesses,
             latitude: position.coords.latitude,
             longitude: position.coords.longitude
@@ -88,6 +92,11 @@ class App extends Component {
 
   generateRestaurant = () => {
     console.log('Biznesses', this.state.businesses)
+    const random = Math.floor(Math.random() * this.state.businesses.length)
+    const choice = this.state.businesses[random]
+    this.setState({
+      choice: choice
+    })
 
   }
 
@@ -122,11 +131,7 @@ class App extends Component {
 
             <Route path="/results">
               <Results
-                results={this.state.businesses.map((business, index) => (
-                  <>
-                    {business.name}
-                  </>
-                ))}
+                results={this.state.choice}
               />
             </Route>
 
