@@ -125,14 +125,48 @@ src
 | Basic CSS |    M     |     3 hrs      |     3hrs     |    3hrs     |
 | Flexbox |    H     |     4 hrs      |      3hrs    |   3hrs      |
 | Stroybook |    M     |     3 hrs      |      5hrs    |     5hrs     |
-| TOTAL               |       37shrs   |     46hrs      |    46hrs     |         |
+| TOTAL               |          |     37hrs     |    46hrs     |     46hrs     |
 
 <br>
 
 
 ## Project Delivery
 
+https://goofy-swartz-4e64b6.netlify.app/
+
+<br><br><br>
+
 ### Code Showcase
+       
+```
+       <main>
+
+          <Switch>
+            <Route exact path="/">
+              <Question1 onClick={this.handleClick1} categories={this.state.categories}
+              />
+            </Route>
+
+            <Route path="/2">
+              <Question2 onClick={this.handleClick2} prices={this.state.prices} />
+            </Route>
+
+
+            <Route path="/3">
+              <Question3 onClick={this.getUserLocation} />
+            </Route>
+
+            <Route path="/results">
+              <Results
+                results={this.state.choice}
+              />
+            </Route>
+
+          </Switch>
+
+        </main>
+        
+```
 
 
 ### Code Issues & Resolutions
