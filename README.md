@@ -4,7 +4,7 @@ Restaurant-Generator
 
 ### Overview
 
-_**Restaurant-Generator** is an application that helps users choose which restaurants to eat at. Users select choices ranging from food category, price, and location, Using the Yelp API, the application returns suggestions on where to eat, seamlessly making the decision for the user. The questions will be asked one by one in a ‘conversational design’ where users select from a range of options to answer the age old question ‘Where do you want to eat?’.
+**Restaurant-Generator** is an application that helps users choose which restaurants to eat at. Users select choices ranging from food category, price, and location, Using the Yelp API, the application returns suggestions on where to eat, seamlessly making the decision for the user. The questions will be asked one by one in a ‘conversational design’ where users select from a range of options to answer the age old question ‘Where do you want to eat?’.
 
 <br>
 
@@ -172,3 +172,4 @@ https://goofy-swartz-4e64b6.netlify.app/
 ### Code Issues & Resolutions
 I had a difficult time setting state and making a question flow with resuable question components so I made seperate Question1, Question2, and Question3 components. This allowed me to change the value of the chocie buttons for each question, allow those buttons to set a specific state depending on their value, and then bind specific onClick event listeners that allow for the transition from the previous question to the next.
 
+<br><br>
