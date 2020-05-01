@@ -170,4 +170,5 @@ https://goofy-swartz-4e64b6.netlify.app/
 
 
 ### Code Issues & Resolutions
+I had a difficult time setting state and making a question flow with resuable question components so I made seperate Question1, Question2, and Question3 components. This allowed me to change the value of the chocie buttons for each question, allow those buttons to set a specific state depending on their value, and then bind specific onClick event listeners that allow for the transition from the previous question to the next.
 
