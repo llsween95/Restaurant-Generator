@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import Choice from './Choice'
 import { Link, withRouter } from 'react-router-dom'
+import Button from './Button'
+import QuestionText from './QuestionText'
 
 class Question1 extends Component {
   render() {
     return (
       <div className="questionContainer">
-        <h3>Choose your food category:</h3>
+        <QuestionText label="Choose category:" />
 
         <div className="choicesContainer">
           {this.props.categories.map((cat) => (
@@ -15,7 +17,6 @@ class Question1 extends Component {
             </Link>
           ))}
         </div>
-
 
       </div>
     )

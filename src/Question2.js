@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Choice from './Choice'
 import { Link } from 'react-router-dom'
+import QuestionText from './QuestionText'
 
 class Question2 extends Component {
   render() {
@@ -9,7 +10,7 @@ class Question2 extends Component {
 
     return (
       <div className="questionContainer2">
-        <h3 className="q2">Select a price range:</h3>
+        <QuestionText label="Select a price range:" />
         <div className="choiceContainer2">
           {this.props && this.props.prices.map((price) => (
             <Link to='/3'>
