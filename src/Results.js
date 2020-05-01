@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 
 class Results extends Component {
   render() {
-    console.log(this.props.results.location)
+
     return (
       <div className="resultsContainer">
         <h3>{this.props.results.name}</h3>

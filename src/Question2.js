@@ -9,7 +9,7 @@ class Question2 extends Component {
 
     return (
       <div className="questionContainer2">
-        <h3>Select a price range:</h3>
+        <h3 className="q2">Select a price range:</h3>
         <div className="choiceContainer2">
           {this.props && this.props.prices.map((price) => (
             <Link to='/3'>
