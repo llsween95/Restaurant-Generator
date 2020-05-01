@@ -12,7 +12,7 @@ class Results extends Component {
           <p>{this.props.results.price}</p>
           <p>{this.props.results.rating}</p>
         </div>
-        <p>{this.props.results.location && this.props.results.location.display_address}</p>
+        <p>{this.props.results.location && this.props.results.location.display_address[0] + ' ' + this.props.results.location.display_address[1]}</p>
       </div>
     )
   }
