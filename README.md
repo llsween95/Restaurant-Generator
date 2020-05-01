@@ -4,7 +4,7 @@ Restaurant-Generator
 
 ### Overview
 
-**Restaurant-Generator** is an application that helps users choose which restaurants to eat at. Users select choices ranging from food category, price, and location, Using the Yelp API, the application returns suggestions on where to eat, seamlessly making the decision for the user. The questions will be asked one by one in a ‘conversational design’ where users select from a range of options to answer the age old question ‘Where do you want to eat?’.
+**Find-N-Dine** is an application that helps users choose which restaurants to eat at. Users select choices ranging from food category, price, and location, Using the Yelp API, the application returns suggestions on where to eat, seamlessly making the decision for the user. The questions will be asked one by one in a ‘conversational design’ where users select from a range of options to answer the age old question ‘Where do you want to eat?’.
 
 <br>
 
