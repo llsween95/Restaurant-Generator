@@ -5,7 +5,7 @@ import HeaderText from './HeaderText'
 class Header extends Component {
   render() {
     return (
-      <header>
+      <header style={this.props.style}>
         <Link to="/">
           <h1 onClick={() => this.props.onClick()}>Find-N-Dine</h1>
         </Link>

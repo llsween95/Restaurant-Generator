@@ -90,12 +90,17 @@ src
 
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    APP.js    | class |   n   |   n   | _will be the parent component and hold all information._               |
-|  Header | functional |   n   |   n   | the header will contain the app name.      |
-|   Survey   |   class   |   y  |   y   | A questionairre about which restaurant to eat at.    |               |
-|   Choice   | class |   y   |   y   | There will be 3-4 choices within each questionairre that will change depending on what the question is. |
+|    APP.js    | class |   n   |   n   | will be the parent component and hold all information._               |
+|  Header | class |   n   |   n   | the header will contain the app name.      |
+|   Question1   |   class   |   y  |   y   | A question about which food category to eat.    | 
+|   Question2   |   class   |   y  |   y   | A question about which food price to eat.    |               |
+|   Question3   |   class   |   y  |   y   | A question about getting user location.    |               |
+|   QuestionText  |   functional   |   n  |   y   | Resusable question text.    |               |
+|   Choice   | class |   y   |   y   | There will be a range choices within each question that will change depending on what the question is. |
 |    Results    | class |   y   |   y   | Results will display restaurant info such as name, image, price range, review average, and location. |
 |    Footer  | functional |   n   |   n   | Luke Sweeney 2020 - Yelp API |
+|   Text   |   functional   |   n  |   y   | Resuable text in footer.    |               |
+
 
 <br>
 
@@ -105,22 +110,21 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| App Component  |    H    |     1 hr      |          |      |
-| API |    H     |     2 hrs      |          |          |
-|  Basic JSX |    L     |     1 hr     |          |         |
-|  Header |    H     |     1 hr     |          |         |
-| Design survey/categories |    H     |     3 hrs      |          |          |
-| Function to match survey results to API query |    H     |     4 hrs      |          |          |
-| Create state for survey questions and choices |    H     |     4 hrs      |          |          |
-| Create dynamic choices depending on the previous question |    H     |     3 hrs      |          |          |
-| Choice Component |    H     |     1 hr      |          |          |
-| Get icons for each choice |    H     |     2 hrs      |          |          |
-| Change state for survey questions |    H     |     3 hrs      |          |          |
-| Results Component |    H     |     2 hrs      |          |          |
-| Get user location |    M     |     2 hrs      |          |          |
-| Basic CSS |    M     |     3 hrs      |          |         |
-| Flexbox |    H     |     4 hrs      |          |         |
-| Stroybook |    M     |     3 hrs      |          |          |
+| App Component  |    H    |     1 hr      |     1hr     |   1hr   |
+| API |    H     |     2 hrs      |     3hrs     |     3hrs     |
+|  Basic JSX |    L     |     1 hr     |     1hr     |     1hr    |
+|  Header |    H     |     1 hr     |      1hr    |     1hr    |
+| Design survey/categories |    H     |     3 hrs      |    5hrs      |     5hrs     |
+| Function to match survey results to API query |    H     |     4 hrs      |     5hrs     |    5hrs      |
+| Create state for survey questions and choices |    H     |     4 hrs      |     5hrs     |   5hrs       |
+| Create dynamic choices depending on the previous question |    H     |     3 hrs      |    4hrs      |     4hrs     |
+| Choice Component |    H     |     1 hr      |     3hrs     |    3hrs      |
+| Change state for survey questions |    H     |     3 hrs      |    6hrs      |    6hrs      |
+| Results Component |    H     |     2 hrs      |     2hrs     |     2hrs     |
+| Get user location |    M     |     2 hrs      |     2hrs     |     2hrs     |
+| Basic CSS |    M     |     3 hrs      |     3hrs     |    3hrs     |
+| Flexbox |    H     |     4 hrs      |      3hrs    |   3hrs      |
+| Stroybook |    M     |     3 hrs      |      5hrs    |     5hrs     |
 | TOTAL               |          |           |         |          |
 
 <br>
