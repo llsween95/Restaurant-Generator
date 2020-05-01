@@ -125,7 +125,7 @@ src
 | Basic CSS |    M     |     3 hrs      |     3hrs     |    3hrs     |
 | Flexbox |    H     |     4 hrs      |      3hrs    |   3hrs      |
 | Stroybook |    M     |     3 hrs      |      5hrs    |     5hrs     |
-| TOTAL               |          |           |         |          |
+| TOTAL               |       37shrs   |     46hrs      |    46hrs     |         |
 
 <br>
 
