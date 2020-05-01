@@ -7,10 +7,11 @@ import Header from './Header';
 
 const style = {
   height: '100px',
-  backgroundColor: 'brown',
+  backgroundColor: '#990000',
   color: '#f1f1f1f1',
   display: 'flex',
-  alignItems: 'center'
+  alignItems: 'center',
+  fontFamily: 'Indie Flower, cursive'
 }
 
 const style2 = {

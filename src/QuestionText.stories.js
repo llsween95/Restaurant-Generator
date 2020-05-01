@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import QuestionText from './QuestionText';
 
 const style = {
-  fontSize: '1.2ren'
+  fontSize: '1.5rem'
 }
 
 storiesOf('QuestionText', module)

@@ -4,7 +4,7 @@ Restaurant-Generator
 
 ### Overview
 
-_**Restaurant-Generator** is an application that helps users choose which restaurants to eat at. Users answer questions ranging from food category, price, location, ratings, and specialty requests. Using the Yelp API, the application returns suggestions on where to eat, seamlessly making the decision for the user. The questions will be asked one by one in a ‘conversational design’ where users select from 3-4 options to answer the age old question ‘Where do you want to eat?’._
+_**Restaurant-Generator** is an application that helps users choose which restaurants to eat at. Users select choices ranging from food category, price, and location, Using the Yelp API, the application returns suggestions on where to eat, seamlessly making the decision for the user. The questions will be asked one by one in a ‘conversational design’ where users select from a range of options to answer the age old question ‘Where do you want to eat?’.
 
 <br>
 
@@ -17,7 +17,7 @@ https://whimsical.com/VoKA1AJcgPosHpFQUtAV5E
 
 ### MVP
 
-- Survey Questionnaire based on dining categories, geographic region, price, and location
+- Generate a restaurant based on dining categories, geographic region, price, and location
 - Yelp API
 - Take questionnaire answers and place into url string for api query search 
 - Mobile-first, conversational design using Flexbox
@@ -70,10 +70,16 @@ src
 |__ components/
       |__ App.js
       |__ Header.js
-      |__ Survey.js
+      |__ Question1.js
+        |__ QuestionText.js
+      |__ Question2.js
+        |__ QuestionText.js
+      |__ Question3.js
+        |__ QuestionText.js
       |__ Choice.js
       |__ Results.js
       |__ Footer.js
+        |__ Text.js
 ```
 
 <br>
